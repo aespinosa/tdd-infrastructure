@@ -9,4 +9,5 @@ vagrant_cluster File.join(cwd, '.chef/vms')
 
 machine 'hello.dev' do
   action :destroy if ENV['reset']
+  recipe 'hello::app'
 end
